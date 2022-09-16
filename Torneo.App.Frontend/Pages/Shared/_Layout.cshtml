@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - Torneo Soccer</title>
+  @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+  <script src="https://kit.fontawesome.com/63bffe74a6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="~/css/style.css">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/Torneo.App.Frontend.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+  <header>
+     <div class="bars__menu">
+        <span class="line1__bars-menu"></span>
+        <span class="line2__bars-menu"></span>
+        <span class="line3__bars-menu"></span>
+    </div>
+
+    <nav>
+      <div class="container_link">
+        <a asp-area="" asp-page="/Index"><img class="logo" src="~/images/logo_definitivo.svg" alt="Logo"></a>
+        <div class="container_nav">
+          <ul class="navbar_list">
+            <li class="nav-item">
+              <a class="enlaces" asp-area="" asp-page="/Index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="enlaces" asp-area="" asp-page="/Municipios/Index">Municipio</a>
+            </li>
+            <li class="nav-item">
+              <a class="enlaces" asp-page="">DT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container_welcome">
+    <main role="main" class="pb-3">
+      @RenderBody()
+    </main>
+  </div>
+
+  <footer class="pie_de_pagina">
+    <div class="container_pie_de_pagina">
+      &copy; 2022 - Torneo.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+
+  @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
