@@ -1,9 +1,10 @@
 ﻿@page
-@model Torneo.App.Frontend.Pages.Municipios.IndexModel
+@model Torneo.App.Frontend.Pages.DT.IndexModel
 @{
 }
-<h1>Municipio</h1>
-<h2 class="titulo_tabla">Listado Municipios</h2>
+
+<h1 class="titulo_tabla">Listado DT</h1>
+
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
@@ -14,13 +15,13 @@
             </tr>
         </thead>
         <tbody class="tbody_container">
-            @foreach (var municipio in Model.municipios)
+            @foreach (var dt in Model.dts)
             {
                 <tr>
-                    <th scope="row">@municipio.id</th>
-                    <td>@municipio.Nombre</td>
+                    <th scope="row">@dt.Id</th>
+                    <td>@dt.Nombre</td>
                     <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@municipio.id"><i class="fa-solid fa-circle-info"></i></a>
+                        <a class="btn_details" asp-page="./Details" asp-route-id="@dt.Id"><i class="fa-solid fa-circle-info"></i></a>
                     </td>
                 </tr>
             }

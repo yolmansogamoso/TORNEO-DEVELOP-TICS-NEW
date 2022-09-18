@@ -1,9 +1,9 @@
 ﻿@page
-@model Torneo.App.Frontend.Pages.Municipios.IndexModel
+@model Torneo.App.Frontend.Pages.Jugadores.IndexModel
 @{
 }
-<h1>Municipio</h1>
-<h2 class="titulo_tabla">Listado Municipios</h2>
+<h1 class="titulo_tabla">Listado de Jugadores</h1>
+
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <tbody class="tbody_container">
-            @foreach (var municipio in Model.municipios)
+            @foreach (var jugador in Model.jugadores)
             {
                 <tr>
-                    <th scope="row">@municipio.id</th>
-                    <td>@municipio.Nombre</td>
+                    <th scope="row">@jugador.Id</th>
+                    <td>@jugador.Nombre</td>
                     <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@municipio.id"><i class="fa-solid fa-circle-info"></i></a>
+                        <a class="btn_details" asp-page="./Details" asp-route-id="@jugador.Id"><i class="fa-solid fa-circle-info"></i></a>
                     </td>
                 </tr>
             }
