@@ -2,14 +2,18 @@
 @model Torneo.App.Frontend.Pages.Partidos.IndexModel
 @{
 }
-<h1 class="titulo_tabla">Listado de Jugadores</h1>
 
+<h1 class="titulo_pages">Partido</h1>
+<h2 class="titulo_tabla">Listado de Jugadores</h2>
+
+<a class="btn_add"><i class="fa-regular fa-square-plus"></i></a>
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Local</th>
+                <th>VS</th>
                 <th scope="col">Visitante</th>
                 <th scope="col">Acciones</th>
             </tr>
@@ -20,9 +24,12 @@
                 <tr>
                     <th scope="row">@partido.Id</th>
                     <td>@partido.Local.Nombre</td>
+                    <td><-VS-></td>
                     <td>@partido.Visitante.Nombre</td>
                     <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@partido.Id"><i class="fa-solid fa-circle-info"></i></a>
+                        <a class="btn_details" asp-page="./Details" asp-route-id="@partido.Id"></a>
+                         <a class="btn_delate" ><i class="fa-solid fa-trash-can"></i></a>
+                        <a class="btn_edit"><i class="fa-regular fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             }
