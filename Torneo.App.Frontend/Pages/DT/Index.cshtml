@@ -3,8 +3,9 @@
 @{
 }
 
-<h1 class="titulo_tabla">Listado DT</h1>
-
+<h1 class="titulo_pages">DT</h1>
+<h2 class="titulo_tabla">Listado DT</h2>
+<a class="btn_add"><i class="fa-regular fa-square-plus"></i></a>
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
@@ -21,7 +22,10 @@
                     <th scope="row">@dt.Id</th>
                     <td>@dt.Nombre</td>
                     <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@dt.Id"><i class="fa-solid fa-circle-info"></i></a>
+                        <a class="btn_details" asp-page="./Details" asp-route-id="@dt.Id"><i
+                            class="fa-solid fa-info"></i></a>
+                        <a class="btn_delate"><i class="fa-solid fa-trash-can"></i></a>
+                        <a class="btn_edit"><i class="fa-regular fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             }

@@ -2,8 +2,11 @@
 @model Torneo.App.Frontend.Pages.Jugadores.IndexModel
 @{
 }
-<h1 class="titulo_tabla">Listado de Jugadores</h1>
 
+<h1 class="titulo_pages">Jugador</h1>
+<h2 class="titulo_tabla">Listado de Jugadores</h2>
+
+<a class="btn_add"><i class="fa-regular fa-square-plus"></i></a>
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
@@ -20,7 +23,9 @@
                     <th scope="row">@jugador.Id</th>
                     <td>@jugador.Nombre</td>
                     <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@jugador.Id"><i class="fa-solid fa-circle-info"></i></a>
+                       <a class="btn_details" asp-page="./Details" asp-route-id="@jugador.Id"><i class="fa-solid fa-info"></i></a>
+                        <a class="btn_delate" ><i class="fa-solid fa-trash-can"></i></a>
+                        <a class="btn_edit"><i class="fa-regular fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             }
