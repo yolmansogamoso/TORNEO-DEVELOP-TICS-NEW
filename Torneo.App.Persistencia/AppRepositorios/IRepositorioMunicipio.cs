@@ -7,5 +7,6 @@ namespace Torneo.App.Persistencia
     {
         public Municipio AgregarMunicipio(Municipio municipio);
         public IEnumerable<Municipio> GetAllMunicipios();
+        public Municipio GetMunicipio(int idMunicipio);
     }
 }
