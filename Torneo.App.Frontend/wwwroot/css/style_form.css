@@ -1,0 +1,89 @@
+:root {
+    --color_1: #723182;
+    --color_1_transparencia: #723182e9;
+    --color_2: #461951;
+    --color_2_tranparencia: #461951e9;
+    --color_3: #e01962;
+    --color_4: #ffffff;
+    --color_5: #e8c042;
+    --color_6: #c7a229;
+    --color_7: #ffb317;
+    --color_8: #fe163c;
+    --color_9: #1a70d2;
+    --color_10:#1aa180;
+    --tipografia_1: "Kodchasan", sans-serif;
+    --tipografia_2: "Raleway", sans-serif;
+  }
+
+.titulo_form{
+    color: var(--color_5);
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: var(--color_2);
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.position_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_form{
+    background-color: var(--color_1);
+    width: 400px;
+    height: 400px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.form_group{
+    color: var(--color_4);
+    font-family: var(--tipografia_2);
+    font-size: 1.1em;
+}
+
+.form_control{
+    width: 250px;
+    height: 25px;
+    padding: 0px 5px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    outline: none;
+    font-family: var(--tipografia_1);
+    font-size: .9em;
+}
+
+.btn_form_add{
+    background-color: var(--color_10);
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    height: 30px;
+    cursor: pointer;
+    font-family: var(--tipografia_2);
+    color: var(--color_4);
+    position: absolute;  
+    font-size: 1em;
+    bottom: 40px;
+    left: 25px; 
+}
+
+.btn-volver{
+    background-color: var(--color_5);
+    padding: 5px 20px;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+
+
