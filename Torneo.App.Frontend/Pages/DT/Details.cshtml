@@ -1,0 +1,29 @@
+﻿@page
+@model Torneo.App.Frontend.Pages.DT.DetailsModel
+@{
+}
+
+<h1 class="titulo_tabla">Detalle del DT</h1>
+<div class="container_tabla_details">
+    <table class="tabla">
+        <tr class="tr_thead">
+            <th class="tabla_details_th" scope="col">Id</th>
+            <td class="tabla_details_td">@Model.dt.Id</td>
+        </tr>
+        <tr>
+            <th class="tabla_details_th" scope="col">Nombre</th>
+            <td class="tabla_details_td">@Model.dt.Nombre</td>
+            
+        </tr>
+        <tr>
+             <th class="tabla_details_th" scope="col">Documento</th>
+            <td class="tabla_details_td">@Model.dt.Documento</td>
+        </tr>
+        <tr>
+            <th class="tabla_details_th" scope="col">Telefono</th>
+            <td class="tabla_details_td">@Model.dt.Telefono</td>
+        </tr>
+    </table>
+    <a class="btn_volver" asp-page="./Index"><i class="fa-solid fa-chevron-left"></i></a> 
+</div>
+
