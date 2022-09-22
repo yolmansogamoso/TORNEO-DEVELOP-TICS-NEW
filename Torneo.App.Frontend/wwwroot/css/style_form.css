@@ -11,6 +11,7 @@
     --color_8: #fe163c;
     --color_9: #1a70d2;
     --color_10:#1aa180;
+    --color_11:#59dcbb;
     --tipografia_1: "Kodchasan", sans-serif;
     --tipografia_2: "Raleway", sans-serif;
   }
@@ -48,6 +49,7 @@
     color: var(--color_4);
     font-family: var(--tipografia_2);
     font-size: 1.1em;
+
 }
 
 .form_control{
@@ -60,6 +62,15 @@
     outline: none;
     font-family: var(--tipografia_1);
     font-size: .9em;
+    position: static;
+}
+
+.text_danger{
+    color: #fe163c;
+    font-size: 0.7em;
+    position: absolute;
+    left: 115px;
+    top: 60px;
 }
 
 .btn_form_add{
@@ -77,12 +88,25 @@
     left: 25px; 
 }
 
+.btn_form_add:hover{
+    background-color: var(--color_11);
+}
+
 .btn-volver{
     background-color: var(--color_5);
     padding: 5px 20px;
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
+    left: 25px;
+    color: var(--color_1);
+    font-family: var(--tipografia_2);
+    text-decoration: none;
+    border-radius: 5px;
 
+}
+
+.btn-volver:hover{
+    background-color: var(--color_6);
 }
 
 
