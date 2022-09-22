@@ -1,0 +1,39 @@
+﻿@page
+@model Torneo.App.Frontend.Pages.Partidos.DetailsModel
+@{
+}
+
+<h1 class="titulo_tabla">Detalle del Equipo</h1>
+<div class="container_tabla_details">
+    <table class="tabla">
+        <tr class="tr_thead">
+            <th scope="col">Id</th>
+            <td>@Model.partido.Id</td>
+        </tr>
+        <tr>
+            <th class="tabla_details_th" scope="col">Fecha hora</th>
+            <td class="tabla_details_td">@Model.partido.FechaHora</td>
+            
+        </tr>
+        <tr>
+             <th class="tabla_details_th" scope="col">Equipo Local/th>
+            <td class="tabla_details_td">@Model.partido.Local.Nombre</td>
+        </tr>
+        <tr>
+            <th class="tabla_details_th" scope="col">Marcador Local</th>
+            <td class="tabla_details_td">@Model.partido.MarcadorLocal</td>
+        </tr>
+         <tr>
+            <th class="tabla_details_th" scope="col">Equipo Visitante</th>
+            <td class="tabla_details_td">@Model.partido.Visitante.Nombre</td>
+        </tr>
+         <tr>
+            <th class="tabla_details_th" scope="col">Marcador Visitante</th>
+            <td class="tabla_details_td">@Model.partido.MarcadorVisitante</td>
+        </tr>
+    </table>
+    <a class="btn_volver" asp-page="./Index"><i class="fa-solid fa-chevron-left"></i></a> 
+</div>
+
+
+
