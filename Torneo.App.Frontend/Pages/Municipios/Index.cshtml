@@ -4,7 +4,9 @@
 }
 <h1 class="titulo_pages">Municipio</h1>
 <h2 class="titulo_tabla">Listado Municipios</h2>
+@if (User.Identity.IsAuthenticated){
 <a class="btn_add" asp-page="./Create"><i class="fa-regular fa-square-plus"></i></a>
+}
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
