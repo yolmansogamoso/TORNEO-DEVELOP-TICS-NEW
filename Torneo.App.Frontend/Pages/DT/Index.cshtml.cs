@@ -9,6 +9,7 @@ namespace Torneo.App.Frontend.Pages.DT
     {
         private readonly IRepositorioDT _repoDT;
         public IEnumerable<DirectorTecnico> dts { get; set; }
+        public bool ErrorEliminar { get; set; }
 
         public IndexModel(IRepositorioDT repoDT)
         {
@@ -18,6 +19,17 @@ namespace Torneo.App.Frontend.Pages.DT
         public void OnGet()
         {
             dts = _repoDT.GetAllDTs();
+        }
+
+        
+        public IActionResult OnPostDelete(int id)
+        {
+            
+                _repoDT.DeleteDT(id);
+                dts = _repoDT.GetAllDTs();
+                return Page();
+         
+            
         }
     }
 }

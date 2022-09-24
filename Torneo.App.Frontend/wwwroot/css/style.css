@@ -262,7 +262,7 @@ tr:nth-child(even){
   top: 140px;
   z-index: 5;
 }
-.btn_details, .btn_delate, .btn_edit{
+.btn_details, .btn_delete, .btn_edit{
   font-size: 1.5em;
   margin-left: 10px;
   cursor: pointer;
@@ -277,13 +277,19 @@ tr:nth-child(even){
   cursor: pointer;
 }
 
-.btn_details:hover, .btn_delate:hover, .btn_edit:hover{
+.btn_details:hover, .btn_delete:hover, .btn_edit:hover{
   font-size: 1.6em;
   filter: drop-shadow(1.2px 1.2px 1.5px  var(--color_4));
 }
 
-.btn_delate{
+.d_inline{
+  display:inline;
+}
+.btn_delete{
   color: var(--color_8);
+  background-color: transparent;
+  border: none;
+  display: inline;
 }
 
 .btn_edit{
