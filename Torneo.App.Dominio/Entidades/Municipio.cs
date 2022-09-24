@@ -4,5 +4,7 @@ namespace Torneo.App.Dominio
     {
         public int id { get; set; }
         public string Nombre { get; set; }
+
+        public List<Equipo> Equipos { get; set; }
     }
 }

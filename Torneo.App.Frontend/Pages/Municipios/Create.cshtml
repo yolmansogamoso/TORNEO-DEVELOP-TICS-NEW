@@ -5,11 +5,11 @@
 <div class="position_form">
     <h1 class="titulo_form">Agregar Municipio</h1>
     <div class="container_form">
-        <form method="post">
+        <form class="flex_outer" method="post">
             <div class="form_group">
                 <label asp-for="municipio.Nombre"></label>
                 <input asp-for="municipio.Nombre" class="form_control" placeholder="Ingrese nombre">
-                <span class="text-danger" asp-validation-for="municipio.Nombre"></span>
+                <span class="text_danger" asp-validation-for="municipio.Nombre"></span>
             </div>
             <button type="submit" class="btn_form_add">Crear municipio</button>
         </form>

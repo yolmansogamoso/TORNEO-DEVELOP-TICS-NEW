@@ -5,30 +5,37 @@
 
 <h1 class="titulo_pages">DT</h1>
 <h2 class="titulo_tabla">Listado DT</h2>
-<a class="btn_add"><i class="fa-regular fa-square-plus"></i></a>
+<a  class="btn_add" asp-page="./Create"><i class="fa-regular fa-square-plus"></i></a>
 <div class="container_tabla">
-    <table class="tabla">
-        <thead class="thead_container">
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody class="tbody_container">
-            @foreach (var dt in Model.dts)
+  <table class="tabla">
+    <thead class="thead_container">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="tbody_container">
+      @foreach (var dt in Model.dts)
+      {
+        <tr>
+          <th scope="row">@dt.Id</th>
+          <td>@dt.Nombre</td>
+          <td>
+            <a class="btn_details" asp-page="./Details" asp-route-id="@dt.Id"><i class="fa-solid fa-info"></i></a>
+            <a class="btn_edit" asp-page="./Edit" asp-route-id="@dt.Id"><i class="fa-regular fa-pen-to-square"></i></a>
+            @if (dt.Equipos.Count == 0)
             {
-                <tr>
-                    <th scope="row">@dt.Id</th>
-                    <td>@dt.Nombre</td>
-                    <td>
-                        <a class="btn_details" asp-page="./Details" asp-route-id="@dt.Id"><i
-                            class="fa-solid fa-info"></i></a>
-                        <a class="btn_delate"><i class="fa-solid fa-trash-can"></i></a>
-                        <a class="btn_edit"><i class="fa-regular fa-pen-to-square"></i></a>
-                    </td>
-                </tr>
+              <form method="post" class="d_inline">
+                <button asp-page-handler="Delete" asp-route-id="@dt.Id"
+              onclick="return confirm('Esta Seguro de eliminar el DT?')" class="btn_delete">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </form>
             }
-        </tbody>
-    </table>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </div>

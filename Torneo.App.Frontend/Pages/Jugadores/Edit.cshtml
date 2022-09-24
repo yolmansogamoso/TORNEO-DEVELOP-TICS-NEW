@@ -1,0 +1,33 @@
+﻿@page
+@model Torneo.App.Frontend.Pages.Jugadores.EditModel
+@{
+}
+
+<div class="position_form">
+    <h1 class="titulo_form">Editar Jugador</h1>
+    <div class="container_form">
+        <form class="flex_outer" method="post">
+            <div class="form_group">
+                <label asp-for="jugador.Id"></label>
+                <input asp-for="jugador.Id" class="form_control_edit" readonly>
+            </div>
+            <div class="form_group">
+                <label asp-for="jugador.Nombre"></label>
+                <input asp-for="jugador.Nombre" class="form_control_edit">
+            </div>
+            <div class="form_group">
+                <label asp-for="PosicionSelected">Posicion</label>
+                <select asp-for="PosicionSelected" asp-items="@Model.PosicionOptions" name="idPosicion"
+                    class="form_control_edit">
+                </select>
+            </div>
+            <div class="form_group">
+                <label asp-for="EquipoSelected">Equipo</label>
+                <select asp-for="EquipoSelected" asp-items="@Model.EquipoOptions" name="idEquipo" class="form_control_edit">
+                </select>
+            </div>
+            <button type="submit" class="btn_form_edit">Editar Jugador</button>
+        </form>
+        <a class="btn-volver" asp-page="./Index">Volver</a>
+    </div>
+</div>

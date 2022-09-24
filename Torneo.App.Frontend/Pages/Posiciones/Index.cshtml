@@ -6,7 +6,7 @@
 <h1 class="titulo_pages">Posicion</h1>
 <h2 class="titulo_tabla">Listado de Posiciones</h2>
 
-<a class="btn_add"><i class="fa-regular fa-square-plus"></i></a>
+<a class="btn_add" asp-page="./Create"><i class="fa-regular fa-square-plus"></i></a>
 <div class="container_tabla">
     <table class="tabla">
         <thead class="thead_container">
@@ -25,7 +25,7 @@
                     <td>
                          <a class="btn_details" asp-page="./Details" asp-route-id="@posicion.Id"><i class="fa-solid fa-info"></i></a>
                         <a class="btn_delate" ><i class="fa-solid fa-trash-can"></i></a>
-                        <a class="btn_edit"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a class="btn_edit" asp-page="./Edit" asp-route-id="@posicion.Id"><i class="fa-regular fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             }
